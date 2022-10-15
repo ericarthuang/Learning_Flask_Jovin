@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Flask</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4 mb-2">{{name}} School</h1>
+        <img class="round mx-auto d-block" id="banner" src="static/卡卡西.png" alt="卡卡西" width="300">
+        <h2 class="text-center mt-4 mb-2">About {{name}}</h2>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatibus quasi nulla est eaque asperiores placeat ullam vero? Quasi voluptate amet officia eaque eum iure officiis pariatur fugit? Odio, cumque!</p>
+        <h2 class="text-center mt-4 mb-2">Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+
+            <button type="button" class="btn btn-outline-primary">
+                Apply
+            </button>            
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg">Contact Us</button>
+            <p>Copyright 2022</p>
+        </div>
+    </div>
+</body>
+</html>
